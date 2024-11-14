@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=LXGW+WenKai+Mono+TC&family=Rubik+Wet+Paint&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  
+.app-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+  
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-family: "Sour Gummy", sans-serif;
+}
+  
+.post-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+}
+  
+.post-form button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.post-form button:hover {
+    background-color: #0056b3;
+}
+
+.clear-all-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #e74c3c;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.clear-all-button:hover {
+    background-color: #c0392b;
+}
+
+  
+.posts-container {
+    margin-top: 20px;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.post {
+    background-color: #fafafa;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.post-content {
+    font-size: 14px;
+    color: #333;
+}
+  
