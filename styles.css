@@ -82,6 +82,13 @@ h1 {
     text-align: left;
 }
 
+.post img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
 .post-content {
     font-size: 14px;
     color: #333;

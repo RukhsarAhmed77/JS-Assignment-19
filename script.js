@@ -1,21 +1,28 @@
 function addPost() {
     var postContent = document.getElementById("postContent").value;
+    var imageUpload = document.getElementById("imageUpload").files[0];
 
-    if (postContent === "") {
-        alert("Please write something!");
+    if (postContent === "" && !imageUpload) {
+        alert("Please write something or upload an image!");
         return;
     }
 
     var postsContainer = document.getElementById("postsContainer");
+    var newPost = "<div class='post'>";
+    if (postContent !== "") {
+        newPost += "<p class='post-content'>" + postContent + "</p>";
+    }
+    if (imageUpload) {
+        var imageURL = URL.createObjectURL(imageUpload);
+        newPost += "<img class='post-image' src='" + imageURL + "' alt='Post Image'>";
+    }
+    newPost += "</div>";
+    postsContainer.innerHTML = newPost + postsContainer.innerHTML;
 
-    postsContainer.innerHTML = 
-        "<div class='post'>" + 
-            "<p class='post-content'>" + postContent + "</p>" + 
-        "</div>" + postsContainer.innerHTML;
     document.getElementById("postContent").value = "";
+    document.getElementById("imageUpload").value = "";
 }
 
 function clearAllPosts() {
-    var postsContainer = document.getElementById("postsContainer");
-    postsContainer.innerHTML = "";
+    document.getElementById("postsContainer").innerHTML = "";
 }

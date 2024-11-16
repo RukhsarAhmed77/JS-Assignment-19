@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JS Assignment 19</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Post App</title>
 </head>
 <body>
     <div class="app-container">
         <h1>Post App</h1>
         <div class="post-form">
-            <textarea id="postContent" placeholder="Write your post..."></textarea>
+            <textarea id="postContent" placeholder="Write something..."></textarea>
+            <input type="file" id="imageUpload" accept="image/*">
             <button onclick="addPost()">Add Post</button>
-            <button onclick="clearAllPosts()" class="clear-all-button">Clear All Posts</button>
+            <button class="clear-all-button" onclick="clearAllPosts()">Clear All</button>
         </div>
-        <div id="postsContainer" class="posts-container">
-        </div>
+        <div class="posts-container" id="postsContainer"></div>
     </div>
     <script src="script.js"></script>
 </body>
